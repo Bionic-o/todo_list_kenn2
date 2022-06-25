@@ -6,32 +6,41 @@
 body{
     font-family: 'roboto', 'poppins';
 }
-header {
-    width: 85%;
-    height: 70px;
-    background-color: burlywood;
-}
 .main-content{
     display: flex;
     justify-content: space-between;
+    background: #545252;
 }
-#tasks{
+.left-content{
     width: 85%;
-    height: 87vh;
 }
-#sidepane{
+#header {
+    height: 62px;
+    color: #fff;
+    background: #292929;
+}
+#task-content{
+    height: 80vh;
+    color: #fff;
+}
+#right-content{
     width: 15%;
-    background: aqua;
     height: 100vh;
+    color: #fff;
+    background: rgb(70, 72, 72);
 }
 footer {
-    min-height: 100px;
-    background-color: burlywood;
+    min-height: 200px;
+    color: #fff;
+    background-color: #292929;
 }
 
 
 @media screen and (max-width: 600px){
-    #sidepane{
+    .left-content{
+        width: 100%;
+    }
+    #right-content{
         display: none;
     }
 }
