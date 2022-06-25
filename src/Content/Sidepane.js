@@ -1,6 +1,8 @@
 function Sidepane () {
     return (
-        "This is Sidepane"
+        <div className="sidepane">
+            "This is Sidepane"
+        </div>
     )
 }
 

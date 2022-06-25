@@ -1,9 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'roboto', 'poppins';
+}
 header {
+    height: 70px;
+    background-color: burlywood;
+}
+.main-content{
+    display: flex;
+
+}
+#tasks{
+    width: 85%;
+}
+#sidepane{
+    width: 15%;
+    background: aqua;
+    height: 87vh;
+}
+footer {
     min-height: 100px;
     background-color: burlywood;
 }
 
-footer {
-    min-height: 100px;
-    background-color: burlywood;
+
+@media screen and (min-width: 600px){
+    #sidepane{
+        display: none;
+    }
 }

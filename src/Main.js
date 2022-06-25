@@ -8,9 +8,13 @@ function Main () {
     return (
         <div>
             <Header />
-            <div>
-                <Content />
-                <Sidepane />
+            <div className="main-content">
+                <div id="tasks">
+                    <Content />
+                </div>
+                <div id="sidepane">
+                    <Sidepane />
+                </div>
             </div>
             <Footer />
         </div>
