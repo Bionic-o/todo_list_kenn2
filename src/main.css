@@ -7,31 +7,30 @@ body{
     font-family: 'roboto', 'poppins';
 }
 header {
-    width: 85%;
-    height: 70px;
+    height: 100px;
     background-color: burlywood;
 }
 .main-content{
     display: flex;
-    justify-content: space-between;
 }
-#tasks{
-    width: 85%;
-    height: 87vh;
+#left-content {
+    width: 100%
 }
-#sidepane{
-    width: 15%;
+#right-content{
+    width: 20%;
     background: aqua;
-    height: 100vh;
+}
+#task{
+    height: 80vh;
 }
 footer {
-    min-height: 100px;
+    height: 100px;
     background-color: burlywood;
 }
 
 
 @media screen and (max-width: 600px){
-    #sidepane{
+    #right-content{
         display: none;
     }
 }

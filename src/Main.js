@@ -7,17 +7,13 @@ import "./main.css"
 function Main () {
     return (
         <div className="main-content">
-            
-            <div>
-                <div className=""><Header /></div>
-                <div id="task">
-                    <Content />
-                </div>
+            <div id="left-content">
+                <div><Header /></div>
+                <div id="task"><Content /></div>
                 <div><Footer /></div>
             </div>
-            
-            <div id="sidepane">
-                    <Sidepane />
+            <div id="right-content">
+                <Sidepane />
             </div>
         </div>
     )
