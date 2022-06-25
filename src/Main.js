@@ -6,17 +6,19 @@ import "./main.css"
 
 function Main () {
     return (
-        <div>
-            <Header />
-            <div className="main-content">
-                <div id="tasks">
+        <div className="main-content">
+            
+            <div>
+                <div className=""><Header /></div>
+                <div id="task">
                     <Content />
                 </div>
-                <div id="sidepane">
-                    <Sidepane />
-                </div>
+                <div><Footer /></div>
             </div>
-            <Footer />
+            
+            <div id="sidepane">
+                    <Sidepane />
+            </div>
         </div>
     )
 }

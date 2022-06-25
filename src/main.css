@@ -7,20 +7,22 @@ body{
     font-family: 'roboto', 'poppins';
 }
 header {
+    width: 85%;
     height: 70px;
     background-color: burlywood;
 }
 .main-content{
     display: flex;
-
+    justify-content: space-between;
 }
 #tasks{
     width: 85%;
+    height: 87vh;
 }
 #sidepane{
     width: 15%;
     background: aqua;
-    height: 87vh;
+    height: 100vh;
 }
 footer {
     min-height: 100px;
@@ -28,7 +30,7 @@ footer {
 }
 
 
-@media screen and (min-width: 600px){
+@media screen and (max-width: 600px){
     #sidepane{
         display: none;
     }
