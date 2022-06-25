@@ -1,6 +1,14 @@
+import Header from "./Header/Header"
+import Footer from "./Footer/Footer"
+import "./main.css"
+
 function Main () {
     return (
-        "this is Main"
+        <div>
+            "this is Main"
+            <Header />
+            <Footer />
+        </div>
     )
 }
 
