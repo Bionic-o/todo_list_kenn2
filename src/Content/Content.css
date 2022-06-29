@@ -10,25 +10,26 @@
     margin: auto;
     padding: 10px;
 }
-.Tuesday-tasks{
-    width: 98%;
-    margin: 15px auto;
+.AllTasks{
+    width: 95%;
+    min-height: 200px;
+    margin: 30px auto;
     padding: 10px;
     border-radius: 5px;
     background: #1f1f1f;
 }
-.Tuesday-tasks input{
-    width: 94%;
-    margin: 5px;
-    margin-left: 10px;
+.AllTasks input{
+    width: 90.7%;
+    margin: 15px;
+    margin-left: 15px;
     padding: 10px;
     border-radius: 3px;
     border: none;
     font-size: 1.2em;
     color: #fff;
-    background: #545252;
+    background: #79b1b1;
 }
-.Tuesday-tasks ::placeholder{
+.AllTasks ::placeholder{
     color: #9c9c9c;
 }
 #add-btn{
@@ -36,28 +37,29 @@
     border-radius: 3px;
     border: none;
     font-size: 1.2em;
-    background: #40005d;
+    background: #02b11c;
     color: #fff;
     cursor: pointer;
 }
 #add-btn:hover{
-    background: #8207bb;
+    background: #07db35;
 }
 #todoItems{
     display: flex;
     width: 98%;
     margin: 20px auto 0;
     padding: 5px 0 0;
-    background: rgb(165, 159, 159);
+    background: #292929;
     color: #fff;
     font-size: 1.2em;
     border-radius: 5px;
     justify-content: space-between;
 }
-#todoItems li{
-    width: 85%;
+#todoItems p{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin-left: 20px;
-    height: 35px;
     padding: 7px;
 }
 #todoItems button{
@@ -67,11 +69,25 @@
 .task-buttons{
     margin-right: 15px;
 }
-#done-btn{
+#save-btn{
+    /* display: none; */
+    height: 30px;
+    margin-bottom: -30px;
+    border-radius: 3px;
+    border: none;
+    font-size: 1em;
+    background: #02b11c;
+    color: #fff;
+    cursor: pointer;
+}
+#save-btn:hover{
+    background: #07db35;
+}
+#taskDone{
     background: transparent;
     border: none;
     border-radius: 3px;
-    color: green;
+    color: #008000;
     font-size: 1.1em;
 }
 #edit-btn{
@@ -81,10 +97,33 @@
     font-size: 1.1em;
     color: #575458;
 }
+#edit-input{
+    width: 80%;
+    height: 30px;
+    margin: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    background: #545252;
+}
 #delete-btn{
     background: transparent;
     border: none;
     border-radius: 3px;
     font-size: 1.1em;
     color: #da1717;
+}
+#taskDone:hover{
+    border: 1px solid green;
+}
+#edit-btn:hover{
+    border: 1px solid #575458;
+}
+#delete-btn:hover{
+    border: 1px solid #da1717;
+}
+#editSave{
+    display: flex;
+    width: 70%;
 }
