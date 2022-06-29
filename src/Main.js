@@ -10,6 +10,7 @@ function Main () {
             <div className="left-content">
                 <div id="header"><Header /></div>
                 <div id="task-content">
+                    <div className="empty-div"></div>
                     <Content />
                 </div>
                 <div><Footer /></div>
@@ -21,4 +22,4 @@ function Main () {
     )
 }
 
-export default Main
+export default Main;
