@@ -1,4 +1,5 @@
 import WeeklyTodoList from './Task-days/WeeklyTodoList';
+import './Content.css'
 
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 

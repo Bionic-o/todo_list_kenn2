@@ -1,0 +1,129 @@
+.days{
+    display: flex;
+    padding: 15px 10px 0 15px;
+}
+.date{
+    margin-left: 100px;
+}
+.tasks{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+.AllTasks{
+    width: 95%;
+    min-height: 200px;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    background: #1f1f1f;
+}
+.AllTasks input{
+    width: 90.7%;
+    margin: 15px;
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    background: #292c2c;
+}
+.AllTasks ::placeholder{
+    color: #9c9c9c;
+}
+#add-btn{
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.2em;
+    background: #02b11c;
+    color: #fff;
+    cursor: pointer;
+}
+#add-btn:hover{
+    background: #07db35;
+}
+#todoItems{
+    display: flex;
+    width: 98%;
+    margin: 20px auto 0;
+    padding: 5px 0 0;
+    background: #292929;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+#todoItems p{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+    padding: 7px;
+}
+#todoItems button{
+    padding: 3px;
+    margin: 5px;
+}
+.task-buttons{
+    margin-right: 15px;
+}
+#save-btn{
+    /* display: none; */
+    height: 30px;
+    margin-bottom: -30px;
+    border-radius: 3px;
+    border: none;
+    font-size: 1em;
+    background: #02b11c;
+    color: #fff;
+    cursor: pointer;
+}
+#save-btn:hover{
+    background: #07db35;
+}
+#taskDone{
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    color: #008000;
+    font-size: 1.1em;
+}
+#edit-btn{
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1em;
+    color: #575458;
+}
+#edit-input{
+    width: 80%;
+    height: 30px;
+    margin: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    background: #545252;
+}
+#delete-btn{
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1em;
+    color: #da1717;
+}
+#taskDone:hover{
+    border: 1px solid green;
+}
+#edit-btn:hover{
+    border: 1px solid #575458;
+}
+#delete-btn:hover{
+    border: 1px solid #da1717;
+}
+#editSave{
+    display: flex;
+    width: 70%;
+}
