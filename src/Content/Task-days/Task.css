@@ -54,21 +54,21 @@
 #save-btn:hover{
     background: #07db35;
 }
-#taskDone{
+.done-btn{
     background: transparent;
     border: none;
     border-radius: 3px;
     color: #008000;
     font-size: 1.1em;
 }
-#edit-btn{
+.edit-btn{
     background: transparent;
     border: none;
     border-radius: 3px;
     font-size: 1.1em;
     color: #575458;
 }
-#edit-input{
+.edit-input{
     width: 80%;
     height: 30px;
     margin: 10px 15px;
@@ -78,23 +78,23 @@
     color: #fff;
     background: #545252;
 }
-#delete-btn{
+.delete-btn{
     background: transparent;
     border: none;
     border-radius: 3px;
     font-size: 1.1em;
     color: #da1717;
 }
-#taskDone:hover{
+.taskDone:hover{
     border: 1px solid green;
 }
-#edit-btn:hover{
+.edit-btn:hover{
     border: 1px solid #575458;
 }
-#delete-btn:hover{
+.delete-btn:hover{
     border: 1px solid #da1717;
 }
-#editSave{
+.editSave{
     display: flex;
     width: 70%;
 }

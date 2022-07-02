@@ -22,9 +22,12 @@ function AllTasks(){
         //console.log(val)
     }
     const addTask = () => {
-        //console.log(randomId)
-        setArrayData((prev) => [{id: randomId, name: getData, isDone: false}, ...prev])
-        setGetData("")
+        if (getData === "") {
+            alert("Please add a task!")
+        } else {
+            setArrayData((prev) => [{id: randomId, name: getData, isDone: false}, ...prev])
+            setGetData("")
+        }
     }
     //console.log(arrayData)
     const deleteTask = (id) => {
@@ -39,10 +42,6 @@ function AllTasks(){
             })
             setArrayData(colorTask)
             }
-        //setDoneColor()
-        /* const todoItem = document.getElementById('todoItems');
-        todoItem.style.backgroundColor = '#39ed24'
-        console.log('Am done!') */
     const editTask = () => {
 
     }
@@ -65,9 +64,9 @@ function AllTasks(){
                             <p>{singleTask.name}</p>
                         </div>
                         <div>
-                            <button onClick={() => doneTask(singleTask.id)}>Done</button>
-                            <button>Edit</button>
-                            <button onClick={() => deleteTask(singleTask.id)}>Delete</button>
+                            <button className="done-btn" onClick={() => doneTask(singleTask.id)}>Done</button>
+                            <button className="edit-btn">Edit</button>
+                            <button className="delete-btn" onClick={() => deleteTask(singleTask.id)}>Delete</button>
                         </div>
                     </div>)
                     })}
