@@ -1,12 +1,13 @@
 import React from "react";
-import '../Content.css'
-import AllTasks from "./AllTasks";
+import '../Content.css';
+import AllTasks from "./Task";
 
-function TaskSaturday(){
+
+function WeeklyTodoList({day}){
     return(
         <div className="AllTasks">
             <div className="days">
-                <div>Saturday Tasks</div>
+                <div>{`${day} tasks`}  </div>
                 <div className='date'>Date/Time</div>
             </div>
             <AllTasks />
@@ -15,4 +16,4 @@ function TaskSaturday(){
 }
 
 
-export default TaskSaturday;
+export default WeeklyTodoList;

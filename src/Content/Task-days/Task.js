@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import '../Content.css';
 
-const mockTask = [{
+/* const mockTask = [{
     id: "1",
     name: "doGrocery",
     isDone: false
@@ -9,21 +9,24 @@ const mockTask = [{
     id: "2",
     name: "doDishes",
     isDone: true
-}]
+}] */
 
 function AllTasks(){
     const [getData, setGetData] = useState("")
-    const [arrayData, setArrayData] = useState(mockTask)
+    const [arrayData, setArrayData] = useState([])
     //const [doneColor, setDoneColor] = useState()
 
+    const randomId = new Date().getTime().toString()
     const inputData = (val) => {
         setGetData(val.target.value)
         //console.log(val)
     }
     const addTask = () => {
-        setArrayData((prev) => [{id: "free", name: getData, isDone: false}, ...prev])
+        console.log(randomId)
+        setArrayData((prev) => [{id: randomId, name: getData, isDone: false}, ...prev])
         setGetData("")
     }
+    console.log(arrayData)
     const deleteTask = (index) => {
         setArrayData((prev) => [getData, ...prev])
         // const newList = list.filter((i, itemIndex) => index !== itemIndex) 
