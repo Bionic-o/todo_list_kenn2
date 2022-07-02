@@ -126,7 +126,7 @@ footer {
         color: #fff;
         cursor: pointer;
     }
-    #taskDone{
+    .taskDone{
         background: transparent;
         border: none;
         border-radius: 3px;
