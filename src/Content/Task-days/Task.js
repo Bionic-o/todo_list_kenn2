@@ -53,6 +53,7 @@ function AllTasks(){
                 onChange={inputData} 
                 value={getData} 
                 id="todo-inputText"
+                placeholder='Enter your new task...'
                 />
                 <button id="add-btn" onClick={addTask}>Add Task</button>
             </div>
