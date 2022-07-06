@@ -15,6 +15,7 @@ function AllTasks(){
     const [getData, setGetData] = useState("")
     const [arrayData, setArrayData] = useState([])
     const [editData, setEditData] = useState(null)
+    const [editText, setEditText] =useState("")
 
     const randomId = new Date().getTime().toString()
     const inputData = (val) => {
@@ -25,7 +26,7 @@ function AllTasks(){
         if (getData === "") {
             alert("Please add a task!")
         } else {
-            setArrayData((prev) => [{id: randomId, name: getData, isDone: false}, ...prev])
+            setArrayData((prev) => [{id: randomId, task: getData, isDone: false, editClicked: false}, ...prev])
             setGetData("")
         }
     }
@@ -42,14 +43,34 @@ function AllTasks(){
             })
             setArrayData(colorTask)
             }
-    const editTask = () => {
-
+    const editTask = (id) => {
+            const editText = arrayData.map((singleTask) => {
+                if (singleTask.id === id) {
+                    singleTask.editClicked = !singleTask.editClicked}
+                    return singleTask
+                })
+            setEditData(editText)
+            }
+    const saveTask = (id) => {
+        const savingTask = editData.map((singleTask) => {
+            if (singleTask.id === id) {
+                if (editText === "") {
+                    alert("Please add a task!")
+                }
+                singleTask.task = editText;
+                singleTask.editClicked = !singleTask.editClicked}
+                return singleTask
+        })
+        setEditData(savingTask)
+        setEditText("")
     }
+    
  
     return(
         <div className="allTasks">
             <div>
-                <input type="text" 
+                <input 
+                type="text" 
                 onChange={inputData} 
                 value={getData} 
                 id="todo-inputText"
@@ -63,14 +84,24 @@ function AllTasks(){
                      return (
                     <div className={singleTask.isDone ? "isDone todoItems" : "todoItems"}>
                         <div>
-                            <p>{singleTask.name}</p>
+                            {singleTask.editClicked ? 
+                            <div>
+                                <input 
+                                type="text" 
+                                onChange={(e) => setEditText(e.target.value)} 
+                                value={editText} 
+                                id={"todo-inputText"}
+                                />
+                                <button className="save-btn" onClick={() => saveTask(singleTask.id)}>Save</button>
+                            </div>
+                            :
+                            <p>{singleTask.task}</p>
+                            }
                         </div>
                         <div>
-                            <button className="done-btn" 
-                            onClick={() => doneTask(singleTask.id)}>Done</button>
-                            <button className="edit-btn">Edit</button>
-                            <button className="delete-btn" 
-                            onClick={() => deleteTask(singleTask.id)}>Delete</button>
+                            <button className="done-btn" onClick={() => doneTask(singleTask.id)}>Done</button>
+                            <button className="edit-btn" onClick={() => editTask(singleTask.id)}>Edit</button>
+                            <button className="delete-btn" onClick={() => deleteTask(singleTask.id)}>Delete</button>
                         </div>
                     </div>)
                     })}

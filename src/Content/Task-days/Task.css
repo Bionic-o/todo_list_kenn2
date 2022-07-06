@@ -85,7 +85,7 @@
     font-size: 1.1em;
     color: #da1717;
 }
-.taskDone:hover{
+.done-btn:hover{
     border: 1px solid green;
 }
 .edit-btn:hover{
