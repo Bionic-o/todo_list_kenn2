@@ -1,0 +1,104 @@
+.sidepane h5{
+    padding-bottom: 10px;
+}
+.join-btc{
+    font-size: 1.2em;
+}
+.bootcamp{
+    width: 150px;
+    height: 250px;
+    margin: auto;
+    padding: 5px;
+    background: #fff;
+}
+.bootcamp p{
+    font-size: .8em;
+    padding: 10px 0;
+}
+.bt-logo{
+    width: 70%;
+    height: 45px;
+    margin: 10px auto 0;
+    border-radius: 20px;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    background: #6f0879;
+}
+.bt-logo h4{
+    margin-bottom: -10px;
+}
+.join{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: #02b11c;
+}
+.join:hover{
+    background: #17e136;
+}
+.game{
+    width: 150px;
+    height: 280px;
+    margin: 25px auto;
+    padding: 5px;
+    color: #fff;
+    background: #292929;
+}
+.new{
+    width: 40px;
+    margin: auto;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: black;
+    background: yellow;
+}
+.game img{
+    width: 140px;
+    height: 140px;
+    margin-top: 10px;
+}
+.game-btn{
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: #02b11c;
+    cursor: pointer;
+}
+.game-btn:hover{
+    background: #17e136;
+}
+.drive{
+    width: 150px;
+    height: 285px;
+    margin: 25px auto;
+    padding: 5px;
+    color: #fff;
+    background: #4a144f;
+}
+.drive-title{
+    margin: auto;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 1.2em;
+    font-weight: 300;
+    border-radius: 5px;
+}
+.drive img{
+    width: 140px;
+    height: 115px;
+    margin-top: 10px;
+}
+.drive-btn{
+    margin-top: 20px;
+    padding: 5px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+}
+.drive-btn:hover{
+    background: #aa2bb5;
+}

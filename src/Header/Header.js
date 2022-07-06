@@ -1,5 +1,4 @@
 const appName = 'NicKenn App'
-const todoTitle = 'Daily Todos'
 function Header () {
     return (
         <div>
@@ -13,9 +12,6 @@ function Header () {
                     </div>
                 </div>
             </div>
-            <header>
-                <div className="daily-todo">{todoTitle}</div>
-            </header>
         </div>
     )
 }

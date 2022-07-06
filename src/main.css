@@ -12,7 +12,7 @@ body{
     background: #79b1b1;
 }
 .left-content{
-    width: 85%;
+    width: 87%;
 }
 .app-control{
     position: absolute;
@@ -21,6 +21,7 @@ body{
     display: flex;
     justify-content: space-between;
     background: #070707;
+    color: #fff;
     z-index: 10;
 }
 .appControl-right i{
@@ -30,10 +31,9 @@ body{
     position: relative;
     top: -5px;
   }
-#header {
+header {
     width: 100%;
     height: 100px;
-    color: #fff;
     background: #292929;
 }
 /* .empty-div{
@@ -48,18 +48,67 @@ body{
     font-size: 2.5em;
 }
 #right-content{
-    width: 15%;
     position: fixed;
+    width: 13%;
     right: 0;
     bottom: 0;
-    min-height: 98.5vh;
+    padding: 25px;
+    text-align: center;
+    height: 100vh;
+    overflow: scroll;
     color: #0c0c0c;
-    background: #e3e2e2;
+    background: #659999;
+    border-left: 1px solid #1f1f1f;
 }
 footer {
-    min-height: 100px;
+    min-height: 150px;
     color: #fff;
     background-color: #292929;
+    text-align: center;
+    padding-top: 10px;
+}
+.contact{
+    padding-top: 40px;
+}
+footer i{
+    font-size: 1.2em;
+    padding: 10px 5px 0;
+}
+footer .fa-facebook{
+    color: #2690e1;
+}
+footer .fa-instagram{
+    color: #be21cc;
+}
+footer .fa-twitter{
+    color: #2690e1;
+}
+footer .email{
+    padding-top: 5px;
+    color: #4db0fb;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+footer .policy{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px;
+    padding-top: 25px;
+    letter-spacing: 1px;
+}
+footer .designBy{
+    font-size: .8em;
+    font-weight: 100;
+}
+footer span{
+    color:  #4db0fb;
+    font-weight: 600;
+}
+.footer-black{
+    background: #070707;
+}
+.footer-black p{
+    padding: 5px;
 }
 
 
@@ -78,7 +127,7 @@ footer {
     .AllTasks{
         width: 95%;
         min-height: 60px;
-        margin: 30px auto;
+        margin: 40px auto;
         padding: 10px;
         border-radius: 5px;
         background: #1f1f1f;
@@ -156,5 +205,29 @@ footer {
         border-radius: 3px;
         font-size:.8em;
         color: #da1717;
+    }
+    .contact{
+        padding-top: 10px;
+    }
+    .contact h2{
+        font-size: 1.2em;
+    }
+    footer .email{
+        font-size: .8em;
+    }
+    footer .policy{
+        display: flex;
+        justify-content: space-between;
+        font-size: .7em;
+        padding: 5px 5px;
+        padding-top: 25px;
+        letter-spacing: 1px;
+    }
+    footer .designBy{
+        font-size: .8em;
+        font-weight: 100;
+    }
+    .footer-black p{
+        font-size: .9em;
     }
 }

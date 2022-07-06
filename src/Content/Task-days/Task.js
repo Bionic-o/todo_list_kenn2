@@ -54,20 +54,23 @@ function AllTasks(){
                 value={getData} 
                 id="todo-inputText"
                 placeholder='Enter your new task...'
+                autoComplete='off'
                 />
                 <button id="add-btn" onClick={addTask}>Add Task</button>
             </div>
-                 {arrayData.map((singleTask, index) => {
+                 {arrayData.map((singleTask) => {
                      console.log(singleTask)
                      return (
-                    <div className={singleTask.isDone ? "isDone todoItems" : "todoItems"} key={index}>
+                    <div className={singleTask.isDone ? "isDone todoItems" : "todoItems"}>
                         <div>
                             <p>{singleTask.name}</p>
                         </div>
                         <div>
-                            <button className="done-btn" onClick={() => doneTask(singleTask.id)}>Done</button>
+                            <button className="done-btn" 
+                            onClick={() => doneTask(singleTask.id)}>Done</button>
                             <button className="edit-btn">Edit</button>
-                            <button className="delete-btn" onClick={() => deleteTask(singleTask.id)}>Delete</button>
+                            <button className="delete-btn" 
+                            onClick={() => deleteTask(singleTask.id)}>Delete</button>
                         </div>
                     </div>)
                     })}
