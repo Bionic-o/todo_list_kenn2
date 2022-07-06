@@ -12,8 +12,8 @@
 }
 .AllTasks{
     width: 95%;
-    min-height: 200px;
-    margin: 30px auto;
+    min-height: 100px;
+    margin: 40px auto;
     padding: 10px;
     border-radius: 5px;
     background: #1f1f1f;
@@ -114,7 +114,7 @@
     font-size: 1.1em;
     color: #da1717;
 }
-#taskDone:hover{
+.done-btn:hover{
     border: 1px solid green;
 }
 #edit-btn:hover{
