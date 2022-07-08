@@ -90,11 +90,24 @@ footer .email{
     letter-spacing: 1px;
 }
 footer .policy{
+    margin-top: 10px;
+}
+footer .coffee{
     display: flex;
     justify-content: space-between;
     padding: 5px 40px;
     padding-top: 25px;
     letter-spacing: 1px;
+}
+.coffee button{
+    border: none;
+    padding: 5px;
+    font-size: 1.2em;
+    color: #fff;
+    background: #008000;
+}
+.coffee button:hover{
+    background: #02b11c;
 }
 footer .designBy{
     font-size: .8em;
@@ -215,13 +228,16 @@ footer span{
     footer .email{
         font-size: .8em;
     }
-    footer .policy{
+    footer .coffee{
         display: flex;
         justify-content: space-between;
         font-size: .7em;
         padding: 5px 5px;
         padding-top: 25px;
         letter-spacing: 1px;
+    }
+    .coffee button{
+        font-size: 1em;
     }
     footer .designBy{
         font-size: .8em;

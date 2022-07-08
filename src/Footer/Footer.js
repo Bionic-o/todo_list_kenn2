@@ -10,8 +10,9 @@ function Footer () {
                 </div>
                 <p className="email">Email: www.nickenn/de.org</p>
             </div>
-            <div className="policy">
-                <p>Policy  |  Terms of Service</p>
+                <p className="policy">Policy  |  Terms of Service</p>
+            <div className="coffee">
+                <button>Buy me a coffee☕</button>
                 <p className="designBy"><i>Designed With ❤️ By <span>NicKenn</span></i></p>
             </div>
             <div className="footer-black">
