@@ -26,6 +26,9 @@
     border-radius: 5px;
     justify-content: space-between;
 }
+.edit-saveBtn{
+    display: flex;
+}
 .todoItems p{
     display: flex;
     justify-content: space-between;
@@ -40,18 +43,21 @@
 .task-buttons{
     margin-right: 15px;
 }
-#save-btn{
+.save-btn{
     /* display: none; */
     height: 30px;
-    margin-bottom: -30px;
     border-radius: 3px;
+    padding-top: 10%;
     border: none;
     font-size: 1em;
     background: #02b11c;
     color: #fff;
     cursor: pointer;
 }
-#save-btn:hover{
+.save-edit{
+    margin-top: 20px;
+}
+.save-btn:hover{
     background: #07db35;
 }
 .done-btn{
@@ -93,10 +99,6 @@
 }
 .delete-btn:hover{
     border: 1px solid #da1717;
-}
-.editSave{
-    display: flex;
-    width: 70%;
 }
 
 .isDone {

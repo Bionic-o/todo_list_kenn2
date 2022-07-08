@@ -178,7 +178,7 @@ footer span{
     }
 
     /* Buttons */
-    #save-btn{
+    .save-btn{
         /* display: none; */
         height: 25px;
         margin-bottom: -30px;
@@ -188,14 +188,14 @@ footer span{
         color: #fff;
         cursor: pointer;
     }
-    #taskDone{
+    .done-btn{
         background: transparent;
         border: none;
         border-radius: 3px;
         color: #008000;
         font-size: .8em;
     }
-    #edit-btn{
+    .edit-btn{
         background: transparent;
         border: none;
         border-radius: 3px;
@@ -212,7 +212,7 @@ footer span{
         color: #fff;
         background: #545252;
     }
-    #delete-btn{
+    .delete-btn{
         background: transparent;
         border: none;
         border-radius: 3px;

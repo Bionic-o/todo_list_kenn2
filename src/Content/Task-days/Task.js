@@ -85,14 +85,14 @@ function AllTasks(){
                     <div className={singleTask.isDone ? "isDone todoItems" : "todoItems"}>
                         <div>
                             {singleTask.editClicked ? 
-                            <div>
+                            <div className='edit-saveBtn'>
                                 <input 
                                 type="text" 
                                 onChange={(e) => setEditText(e.target.value)} 
                                 value={editText} 
                                 id={"todo-inputText"}
                                 />
-                                <button className="save-btn" onClick={() => saveTask(singleTask.id)}>Save</button>
+                                <div className='save-edit'><button className="save-btn" onClick={() => saveTask(singleTask.id)}>Save</button></div>
                             </div>
                             :
                             <p>{singleTask.task}</p>
