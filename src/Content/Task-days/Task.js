@@ -79,10 +79,10 @@ function AllTasks(){
                 />
                 <button id="add-btn" onClick={addTask}>Add Task</button>
             </div>
-                 {arrayData.map((singleTask) => {
+                 {arrayData.map((singleTask, index) => {
                      console.log(singleTask)
                      return (
-                    <div className={singleTask.isDone ? "isDone todoItems" : "todoItems"}>
+                    <div key={index} className={singleTask.isDone ? "isDone todoItems" : "todoItems"}>
                         <div>
                             {singleTask.editClicked ? 
                             <div className='edit-saveBtn'>
