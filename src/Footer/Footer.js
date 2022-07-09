@@ -9,7 +9,7 @@ function Footer () {
                 <i className="fa-brands fa-twitter" title="Twitter"></i>
                 <i class="fa-brands fa-github" title="Github"></i>
                 </div>
-                <p className="email">Email: www.nickenn/de.org</p>
+                <p className="email">Email: nickenn2022@gmail.com</p>
             </div>
                 <p className="policy">Policy  |  Terms of Service</p>
             <div className="coffee">
