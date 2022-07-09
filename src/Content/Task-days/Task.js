@@ -18,6 +18,7 @@ function AllTasks(){
     const [editText, setEditText] =useState("")
 
     const randomId = new Date().getTime().toString()
+    const localDateTime = `${new Date().toLocaleDateString()} / ${new Date().toLocaleTimeString()}`
     const inputData = (val) => {
         setGetData(val.target.value)
         //console.log(val)
@@ -25,7 +26,7 @@ function AllTasks(){
 
     const enterKeyTask = (event) => {
         if (event.key === "Enter") {
-            setArrayData((prev) => [{id: randomId, task: getData, isDone: false, editClicked: false}, ...prev])
+            setArrayData((prev) => [{id: randomId, task: getData, isDone: false, editClicked: false, dateTime: localDateTime}, ...prev])
             setGetData("")
         }
     }
@@ -34,7 +35,7 @@ function AllTasks(){
         if (getData === "") {
             alert("Please add a task!")
         } else {
-            setArrayData((prev) => [{id: randomId, task: getData, isDone: false, editClicked: false}, ...prev])
+            setArrayData((prev) => [{id: randomId, task: getData, isDone: false, editClicked: false, dateTime: localDateTime}, ...prev])
             setGetData("")
         }
     }
@@ -66,10 +67,11 @@ function AllTasks(){
                     alert("Please add a task!")
                 }
                 singleTask.task = editText;
+                singleTask.dateTime = localDateTime;
                 singleTask.editClicked = !singleTask.editClicked}
                 return singleTask
         })
-        setEditData(savingTask)
+        setEditData(savingTask.dateTime)
         setEditText("")
     }
     
@@ -104,7 +106,7 @@ function AllTasks(){
                                 <div className='save-edit'><button className="save-btn" onClick={() => saveTask(singleTask.id)}>Save</button></div>
                             </div>
                             :
-                            <p>{singleTask.task}</p>
+                            <p>{singleTask.task} {singleTask.dateTime}</p>
                             }
                         </div>
                         <div>
