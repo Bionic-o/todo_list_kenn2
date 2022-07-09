@@ -4,9 +4,10 @@ function Footer () {
             <div className="contact">
                 <h2>Contact Us</h2>
                 <div>
-                <i className="fa-brands fa-facebook"></i>
-                <i className="fa-brands fa-instagram"></i>
-                <i className="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-facebook" title="Facebook"></i>
+                <i className="fa-brands fa-instagram" title="Instagram"></i>
+                <i className="fa-brands fa-twitter" title="Twitter"></i>
+                <i class="fa-brands fa-github" title="Github"></i>
                 </div>
                 <p className="email">Email: www.nickenn/de.org</p>
             </div>
