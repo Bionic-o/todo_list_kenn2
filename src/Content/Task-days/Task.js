@@ -14,7 +14,6 @@ import "./Task.css"
 function AllTasks(){
     const [getData, setGetData] = useState("")
     const [arrayData, setArrayData] = useState([])
-    const [editData, setEditData] = useState(null)
     const [editText, setEditText] =useState("")
 
     const randomId = new Date().getTime().toString()
@@ -55,16 +54,26 @@ function AllTasks(){
             }
 
     const editTask = (id) => {
-            const editText = arrayData.map((singleTask) => {
+            /* arrayData.forEach((singleTask) => {
+                console.log(singleTask.id, id)
                 if (singleTask.id === id) {
                     singleTask.editClicked = !singleTask.editClicked}
-                    return singleTask
+                    editingText = singleTask.task
+                }) */
+            setArrayData((prevData) => {
+                return prevData.map((singleTask) => {
+                    if (id !== singleTask.id) {
+                        return singleTask
+                    } 
+                    return {...singleTask,editClicked: true}
                 })
-            setEditData(editText)
+            })
+            const editingTask = arrayData.find((singleTask) => singleTask.id === id )
+            setEditText(editingTask.task)
             }
 
     const saveTask = (id) => {
-        const savingTask = editData.map((singleTask) => {
+        /* const savingTask = editData.map((singleTask) => {
             if (singleTask.id === id) {
                 if (editText === "") {
                     alert("Please add a task!")
@@ -74,7 +83,17 @@ function AllTasks(){
                 singleTask.editClicked = !singleTask.editClicked}
                 return singleTask
         })
-        setEditData(savingTask.dateTime)
+        setEditData(savingTask.dateTime) */
+
+        setArrayData((prevData) => {
+            return prevData.map((singleTask) => {
+                if (id !== singleTask.id) {
+                    return singleTask
+                } 
+                const localDateTime = `${new Date().toLocaleDateString()} / ${new Date().toLocaleTimeString()}`
+                return {...singleTask, task: editText, editClicked: false, dateTime: localDateTime}
+            })
+        })
     }
     
  
