@@ -22,6 +22,14 @@ function AllTasks(){
         setGetData(val.target.value)
         //console.log(val)
     }
+
+    const enterKeyTask = (event) => {
+        if (event.key === "Enter") {
+            setArrayData((prev) => [{id: randomId, task: getData, isDone: false, editClicked: false}, ...prev])
+            setGetData("")
+        }
+    }
+
     const addTask = () => {
         if (getData === "") {
             alert("Please add a task!")
@@ -76,6 +84,7 @@ function AllTasks(){
                 id="todo-inputText"
                 placeholder='Enter your new task...'
                 autoComplete='off'
+                onKeyPress={enterKeyTask}
                 />
                 <button id="add-btn" onClick={addTask}>Add Task</button>
             </div>
