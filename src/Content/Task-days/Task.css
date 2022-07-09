@@ -32,7 +32,7 @@
 .todoItems p{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     margin-left: 20px;
     padding: 7px;
 }
@@ -103,4 +103,14 @@
 
 .isDone {
     background-color: #39ed24
+}
+
+.buttons {
+    display: flex;
+    align-items: flex-start;
+}
+
+.dateTime {
+    font-size: 0.7em;
+    color: rgb(65, 188, 230)
 }

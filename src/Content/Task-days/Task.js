@@ -19,6 +19,7 @@ function AllTasks(){
 
     const randomId = new Date().getTime().toString()
     const localDateTime = `${new Date().toLocaleDateString()} / ${new Date().toLocaleTimeString()}`
+
     const inputData = (val) => {
         setGetData(val.target.value)
         //console.log(val)
@@ -52,6 +53,7 @@ function AllTasks(){
             })
             setArrayData(colorTask)
             }
+
     const editTask = (id) => {
             const editText = arrayData.map((singleTask) => {
                 if (singleTask.id === id) {
@@ -60,6 +62,7 @@ function AllTasks(){
                 })
             setEditData(editText)
             }
+
     const saveTask = (id) => {
         const savingTask = editData.map((singleTask) => {
             if (singleTask.id === id) {
@@ -72,7 +75,6 @@ function AllTasks(){
                 return singleTask
         })
         setEditData(savingTask.dateTime)
-        setEditText("")
     }
     
  
@@ -106,10 +108,13 @@ function AllTasks(){
                                 <div className='save-edit'><button className="save-btn" onClick={() => saveTask(singleTask.id)}>Save</button></div>
                             </div>
                             :
-                            <p>{singleTask.task} {singleTask.dateTime}</p>
+                            <div>
+                                <p className="dateTime">{singleTask.dateTime}</p>
+                                <p>{singleTask.task}</p>
+                            </div>
                             }
                         </div>
-                        <div>
+                        <div className="buttons">
                             <button className="done-btn" onClick={() => doneTask(singleTask.id)}>Done</button>
                             <button className="edit-btn" onClick={() => editTask(singleTask.id)}>Edit</button>
                             <button className="delete-btn" onClick={() => deleteTask(singleTask.id)}>Delete</button>

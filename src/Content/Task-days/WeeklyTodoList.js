@@ -8,7 +8,6 @@ function WeeklyTodoList({day}){
         <div className="AllTasks">
             <div className="days">
                 <div>{`${day} tasks`}  </div>
-                <input type="date" id="addDate"/>
                 {/* <div className='date'>Date/Time</div> */}
             </div>
             <AllTasks />
