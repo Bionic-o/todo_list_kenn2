@@ -17,7 +17,7 @@ function AllTasks(){
     const [editText, setEditText] =useState("")
 
     const randomId = new Date().getTime().toString()
-    const localDateTime = `${new Date().toLocaleDateString()} / ${new Date().toLocaleTimeString()}`
+    const localDateTime = `${new Date().toLocaleDateString()} - ${new Date().toLocaleTimeString()}`
 
     const inputData = (val) => {
         setGetData(val.target.value)
