@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import "./Task.css"
 
 /* const mockTask = [{
@@ -11,13 +11,33 @@ import "./Task.css"
     isDone: true
 }] */
 
-function AllTasks(){
+function AllTasks({day}){
     const [getData, setGetData] = useState("")
     const [arrayData, setArrayData] = useState([])
     const [editText, setEditText] =useState("")
 
     const randomId = new Date().getTime().toString()
     const localDateTime = `${new Date().toLocaleDateString()} / ${new Date().toLocaleTimeString()}`
+
+    useEffect(() => {
+        console.log("loading")
+        const items = JSON.parse(localStorage.getItem('items' + day));
+        if (items) {
+         setArrayData(items);
+        }
+      }, []);
+
+      useEffect(() => {
+        if (arrayData.length < 1) {
+            return
+        }
+        localStorage.setItem('items' + day, JSON.stringify(arrayData));
+        console.log(arrayData)
+      }, [arrayData]);
+
+    /* const storeData = () => {
+        localStorage.setItem('storeTaskData', JSON.stringify(arrayData));
+    } */
 
     const inputData = (val) => {
         setGetData(val.target.value)
@@ -38,6 +58,7 @@ function AllTasks(){
             setArrayData((prev) => [{id: randomId, task: getData, isDone: false, editClicked: false, dateTime: localDateTime}, ...prev])
             setGetData("")
         }
+
     }
     //console.log(arrayData)
     const deleteTask = (id) => {
@@ -119,7 +140,7 @@ function AllTasks(){
                             {singleTask.editClicked ? 
                             <div className='edit-saveBtn'>
                                 <input 
-                                type="text" 
+                                type="text  " 
                                 onChange={(e) => setEditText(e.target.value)} 
                                 value={editText} 
                                 id={"todo-inputText"}

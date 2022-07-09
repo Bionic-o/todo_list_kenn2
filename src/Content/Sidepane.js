@@ -17,13 +17,13 @@ function Sidepane () {
             </div>
             <div className='game'>
                 <h6 className='new'>NEW</h6>
-                <img src='https://i.pinimg.com/originals/6f/55/24/6f55246f0c822e6dcba4de2b08db0472.jpg'/>
+                <img src='https://i.pinimg.com/originals/6f/55/24/6f55246f0c822e6dcba4de2b08db0472.jpg' alt=""/>
                 <p>Latest Monster game!</p>
                 <button className='game-btn'>Play Game</button>
             </div>
             <div className='drive'>
                 <h6 className='drive-title'>NicKenn Driving App</h6>
-                <img src='https://st.depositphotos.com/1000128/3162/i/600/depositphotos_31625537-stock-photo-gps-navigation-travel-and-tourism.jpg'/>
+                <img src='https://st.depositphotos.com/1000128/3162/i/600/depositphotos_31625537-stock-photo-gps-navigation-travel-and-tourism.jpg' alt=""/>
                 <p>Try our driving app for safer routes!</p>
                 <button className='drive-btn'>Download Now!</button>
             </div>
@@ -40,13 +40,13 @@ function Sidepane () {
             </div>
             <div className='game'>
                 <h6 className='new'>NEW</h6>
-                <img src='https://i.pinimg.com/originals/6f/55/24/6f55246f0c822e6dcba4de2b08db0472.jpg'/>
+                <img src='https://i.pinimg.com/originals/6f/55/24/6f55246f0c822e6dcba4de2b08db0472.jpg' alt=""/>
                 <p>Latest Monster game!</p>
                 <button className='game-btn'>Play Game</button>
             </div>
             <div className='drive'>
                 <h6 className='drive-title'>NicKenn Driving App</h6>
-                <img src='https://st.depositphotos.com/1000128/3162/i/600/depositphotos_31625537-stock-photo-gps-navigation-travel-and-tourism.jpg'/>
+                <img src='https://st.depositphotos.com/1000128/3162/i/600/depositphotos_31625537-stock-photo-gps-navigation-travel-and-tourism.jpg' alt=""/>
                 <p>Try our driving app for safer routes!</p>
                 <button className='drive-btn'>Download Now!</button>
             </div>

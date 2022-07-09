@@ -10,7 +10,7 @@ function WeeklyTodoList({day}){
                 <div>{`${day} tasks`}  </div>
                 {/* <div className='date'>Date/Time</div> */}
             </div>
-            <AllTasks />
+            <AllTasks day={day}/>
         </div>
     )
 }
