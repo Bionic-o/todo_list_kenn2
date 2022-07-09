@@ -35,10 +35,6 @@ function AllTasks({day}){
         console.log(arrayData)
       }, [arrayData]);
 
-    /* const storeData = () => {
-        localStorage.setItem('storeTaskData', JSON.stringify(arrayData));
-    } */
-
     const inputData = (val) => {
         setGetData(val.target.value)
         //console.log(val)
@@ -62,8 +58,10 @@ function AllTasks({day}){
     }
     //console.log(arrayData)
     const deleteTask = (id) => {
-        const newArray = arrayData.filter((singleTask) => singleTask.id !== id) 
-        setArrayData(newArray)
+        //const newArray = arrayData.filter((singleTask) => singleTask.id !== id) 
+        setArrayData((prevData) => {
+            return prevData.filter((singleTask) => singleTask.id !== id)
+        })
     }
     const doneTask = (id) => {
             const colorTask = arrayData.map((singleTask) => {
